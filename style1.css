@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&family=Sofia+Sans:ital,wght@1,200&display=swap');
+@font-face {
+    font-family: samim;
+    src: url(Samim.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: samim;
+}
+
+#bg{
+    /* background-color: #e0e5ec; */
+    width: 100%;
+    height: 100vh;
+    /* background: url(background.png) fixed no-repeat bottom; 
+    background-size: 400px; */
+}
+
+body{
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   
+}
+
+.box{
+    position: relative;
+    display: flex;
+    width: 700px;
+    height: 700px;
+    padding: 30px 40px;
+    /* background: #e0e5ec; */
+    background-color: #e8e8e8;
+    box-shadow:  29px 29px 41px #c5c5c5,
+             -29px -29px 41px #ffffff;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.form .caption{
+    color: #2c2c2c;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 2em;
+    transition: 0.4s;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 32px;
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 15px 10px 11px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #01466f;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.inputBox span{
+    position: absolute;
+    right: 3px;
+    padding: 15px 5px 10px;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #01466f;
+    transform: translateY(-38px);
+    text-shadow: 0px 0px 6px rgb(255, 255, 255);
+}
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    /* background: #f05323; */
+    background: #1c1c1c;
+    border-radius: 6px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i
+{
+    height: 44px;
+    background: transparent;
+    box-shadow: inset -7px -7px 20px 0px rgba(255, 255, 255, 0.6),
+                inset -4px -4px 5px 0px rgba(255, 255, 255, 0.6),
+                inset 7px 7px 20px 0px rgba(0, 0, 0, 0.133),
+                inset 4px 4px 5px 0px rgba(0, 0, 0, 0.067);
+}
+
+
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    background: #01466f;
+    color: #fff;
+    padding: 9px 25px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6),
+                -4px -4px 5px 0px rgba(255, 255, 255, 0.6),
+                7px 7px 20px 0px rgba(0, 0, 0, 0.133),
+                4px 4px 5px 0px rgba(0, 0, 0, 0.067);
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover
+{
+    box-shadow: inset -7px -7px 20px 0px rgba(0, 179, 255, 0.6),
+                inset -4px -4px 5px 0px rgba(0, 136, 255, 0.6),
+                inset 7px 7px 20px 0px rgba(0, 0, 0, 0.421),
+                inset 4px 4px 5px 0px rgba(0, 0, 0, 0.555);
+    letter-spacing: 2px;
+}
+input[type="submit"]:active
+{
+   background: rgb(244, 244, 244);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.btns{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+.btns a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 300px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #01466f;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: inset -7px -7px 20px 0px rgba(255, 255, 255, 0.6),
+    inset -4px -4px 5px 0px rgba(255, 255, 255, 0.6),
+    inset 7px 7px 20px 0px rgba(0, 0, 0, 0.133),
+    inset 4px 4px 5px 0px rgba(0, 0, 0, 0.067);
+}
+
+
+.btns a:hover{
+    color: #fff;
+}
+
+.btns .whatsApp:hover{
+    background-color: #1DB954;
+    color: #fff;
+    letter-spacing: 0.5px;
+    box-shadow:
+    inset 8px 10px 30px rgba(0, 0, 0, 0.163),
+    inset 2px 5px 20px rgba(0, 0, 0, 0.332);
+ 
+}
+.btns .instagram:hover{
+    background-color: #833AB4;
+    color: #fff;
+    letter-spacing: 0.5px;
+    box-shadow:
+    inset 8px 10px 30px rgba(0, 0, 0, 0.163),
+    inset 2px 5px 20px rgba(0, 0, 0, 0.332);
+ 
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3em;
+    color: #01466f;
+    font-size: 12px;
+}
+.footer .web{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #01466f;
+    font-weight: 600;
+    transition: 0.4s;
+}
+.footer a:hover{
+    color: #01466f;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Logo */
+
+.form .logo
+{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo .img{
+    height: 39px;
+    transition: 0.4s;
+}
+.logo h1{
+    position: relative;
+    margin-left: 10px;
+    font-size: 16px;
+    margin-top: 6px;
+    color: #01466f;
+    font-family: 'Poppins';
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-align: center;
+    transition: 0.4s;
+    
+}
+
+
+@media(max-width: 734px){
+    
+
+    .box{
+        position: relative;
+        bottom: 1.5em;
+        padding: 50px 40px;
+        width: 390px;
+        transition: 0.3s;
+        background-color: transparent;
+        box-shadow: none;
+    } 
+    .logo .img{
+        height: 38px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .form .caption{
+        font-size: 11px;
+    }
+    .box::before{
+        width: 340px;
+    }
+    .box::after{
+        width: 340px;
+    }
+    .inputBox{
+        width: 100%;
+        position: relative;
+        bottom: 3px;
+    }
+    .footer{
+        margin-top: 1em;
+    }
+}
