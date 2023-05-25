@@ -271,9 +271,10 @@ input[type="number"]::-webkit-outer-spin-button {
     
 
     .box{
+        position: relative;
+        bottom: 3em;
         padding: 100px 40px;
         width: 390px;
-        margin-top: 2em;
         transition: 0.3s;
         background-color: transparent;
         box-shadow: none;
